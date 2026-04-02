@@ -1,0 +1,83 @@
+{# -----------------------------------------------------
+   Custom Frontpage Template
+   Completely new design – modern, clean, full control.
+   ----------------------------------------------------- #}
+
+{% extends "@bootstrap_barrio/layout/page.html.twig" %}
+
+{% block content %}
+
+<div class="frontpage">
+
+  {# ------------------ HERO SECTION ------------------ #}
+  <section class="hero d-flex align-items-center text-center text-white" style="background:url('/sites/default/files/hero.jpg') center/cover no-repeat; min-height: 60vh;">
+    <div class="container">
+      <h1 class="display-3 font-weight-bold mb-4">Välkommen till Min Hemsida</h1>
+      <p class="lead mb-4">En helt ny frontpage-design byggd med Twig och Bootstrap.</p>
+      <a href="/content" class="btn btn-lg btn-light px-5 py-3 rounded-pill">Utforska mer</a>
+    </div>
+  </section>
+
+  {# ------------------ THREE BOXES ------------------ #}
+  <section class="container py-5">
+    <div class="row text-center">
+
+      <div class="col-md-4 mb-4">
+        <div class="p-4 shadow-sm rounded bg-white h-100">
+          <h3 class="mb-3">Meny</h3>
+          {{ drupal_menu('main') }}
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="p-4 shadow-sm rounded bg-white h-100">
+          <h3 class="mb-3">Ett block</h3>
+          {{ drupal_block('system_powered_by_block') }}
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="p-4 shadow-sm rounded bg-white h-100">
+          <h3 class="mb-3">En sida</h3>
+          {{ drupal_entity('node', 1) }} {# Byt 1 till din nod ID #}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  {# ------------------ FEATURED CONTENT ------------------ #}
+  <section class="featured py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Utvalda artiklar</h2>
+
+      {{ drupal_view('latest_content', 'block_1') }} 
+      {# Byt ’latest_content’ mot din view och ’block_1’ mot ditt display ID #}
+    </div>
+  </section>
+
+  {# ------------------ OPTIONAL SIDEBAR ------------------ #}
+  {% if page.sidebar_first %}
+  <section class="container py-5">
+    <div class="sidebar-left shadow-sm p-4 bg-white rounded">
+      <h3>Sidoinformation</h3>
+      {{ page.sidebar_first }}
+    </div>
+  </section>
+  {% endif %}
+
+</div> <!-- end frontpage -->
+
+{% endblock %}
+
+{# -----------------------------------------------------
+   CUSTOM FOOTER (optional – override block)
+   ----------------------------------------------------- #}
+{% block footer %}
+<footer class="custom-footer text-center text-white py-4" style="background:#222;">
+  <div class="container">
+    <p class="mb-1">&copy; {{ "now"|date("Y") }} Min Drupal-webbplats</p>
+    <p class="small opacity-75">Byggd med en helt egen frontpage-template</p>
+  </div>
+</footer>
+{% endblock %}

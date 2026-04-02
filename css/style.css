@@ -2,3 +2,117 @@
  * @file
  * Subtheme specific CSS.
  */
+
+p {
+  font-size: 1em;
+
+}
+
+.dialog-off-canvas-main-canvas {
+
+}
+
+
+.main-content {
+  font-weight: 600;
+  text-transform: none;
+  color: #FFE97A;
+
+
+
+}
+
+body {
+  display:flex;
+  font-family: "Montserrat", sans-serif;
+    background-color: oklch(0.4295 0.1281 265.43);
+
+  background-image: url('fans_bakgrund.jpeg');
+
+}
+
+#block-gurra-svensson-account-menu {
+  color: blueviolet;
+
+}
+#header {
+  max-width: 100%;
+}
+
+.container {
+  background-color:c;
+}
+
+.navbar-brand {
+  display: flex;
+  justify-content: start;
+  max-width: 125px;
+  max-height: 125px;
+}
+#CollapsingNavbar {
+  display: flex;
+  justify-content: end;
+}
+.sidebar .block{
+  background-color: oklch(0.4295 0.1281 265.43);
+}
+
+.header{
+  background-color:oklch(0.4295 0.1281 265.43) ;
+  border-color:black;
+}
+
+.sidebar h2 {
+ text-shadow:none ;
+}
+
+#block-gurra-svensson-kopbiljetter{
+  border-color:oklch(0.4295 0.1281 265.43) ;
+}
+
+#text{
+  color: yellow;
+}
+
+h2 span {
+  color: oklch(0.8333 0.170981 84.2205);
+}
+
+a {
+  color: #FFF;
+
+}
+
+.site-footer {
+  background-color: oklch(0.4295 0.1281 265.43);
+}
+
+.section {
+  color:oklch(0.8333 0.170981 84.2205);
+}
+
+.nav-link {
+  color:oklch(0.8333 0.170981 84.2205);
+}
+ .navbar-nav .nav-link.active {
+  color:oklch(0.8333 0.170981 84.2205);
+;
+}
+ .navbar-nav .nav-link.active :hover{
+  color:oklch(0.6333 0.170981 84.2205);
+ }
+
+ #sidebar-second {
+  color:oklch(0.8333 0.170981 84.2205);
+  justify-content: end;
+ }
+
+ .contextual-region{
+  color:oklch(0.8333 0.170981 84.2205)
+ }
+
+ .side-footer{
+    background-color: oklch(0.4295 0.1281 265.43);
+
+ }
+
